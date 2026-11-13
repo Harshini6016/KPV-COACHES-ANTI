@@ -1,0 +1,49 @@
+{
+  "name": "KPV Coaches – Luxury Fleet Management",
+  "short_name": "KPV Coaches",
+  "description": "Commercial luxury coachbuilding, fleet servicing, and stage-by-stage vehicle tracking.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#FFF9F0",
+  "theme_color": "#493A2E",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/icons/pwa-icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/pwa-icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/pwa-maskable.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "utilities"],
+  "shortcuts": [
+    {
+      "name": "Admin Portal",
+      "url": "./admin/dashboard.html",
+      "description": "Executive workshop dashboard"
+    },
+    {
+      "name": "Employee Attendance",
+      "url": "./employee/attendance.html",
+      "description": "Clock in over workshop Wi-Fi"
+    },
+    {
+      "name": "Vehicle Tracking",
+      "url": "./customer/vehicle-tracking.html",
+      "description": "Live 6-stage vehicle progress"
+    }
+  ]
+}
+

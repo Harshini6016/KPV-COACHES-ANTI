@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>KPV COACHES – Luxury Coachbuilding &amp; Fleet Management</title>
+  
+  <!-- PWA & Mobile Meta Tags -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#493A2E">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="KPV Coaches">
+  <link rel="apple-touch-icon" href="assets/icons/pwa-icon-192.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/pwa-icon-192.svg">
+
+  <!-- Fonts & Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/login.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body style="background: var(--cream-white);">
+
+  <!-- Luxury Navigation Bar -->
+  <header style="background: #24211D; border-bottom: 1.5px solid var(--soft-gold); padding: 14px 24px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.25);">
+    <div style="max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;">
+      <a href="index.html" style="display: flex; align-items: center; gap: 14px;">
+        <img src="assets/icons/logo.svg" alt="KPV Coaches" style="height: 44px;">
+      </a>
+
+      <nav style="display: flex; align-items: center; gap: 28px;" class="d-none d-md-flex">
+        <a href="#services" style="color: var(--champagne-beige); font-weight: 500; font-size: 0.95rem;">Bespoke Craftsmanship</a>
+        <a href="#tracking" style="color: var(--champagne-beige); font-weight: 500; font-size: 0.95rem;">Live Vehicle Tracking</a>
+        <a href="#portals" style="color: var(--champagne-beige); font-weight: 500; font-size: 0.95rem;">Portals</a>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <a href="login.html" class="btn btn-gold" style="padding: 8px 18px; font-size: 0.9rem;">
+          <i data-lucide="log-in"></i> Sign In
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section style="background: radial-gradient(circle at 50% 30%, #352F27 0%, #221F1B 65%, #181613 100%); color: var(--cream-white); padding: 60px 20px 60px; position: relative; overflow: hidden; border-bottom: 2px solid var(--soft-gold);">
+    <div style="max-width: 1140px; margin: 0 auto; text-align: center; position: relative; z-index: 2;">
+      <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(184, 154, 112, 0.15); border: 1px solid var(--soft-gold); padding: 6px 16px; border-radius: 9999px; margin-bottom: 20px;">
+        <span class="live-pulse-dot"></span>
+        <span style="font-family: var(--font-heading); color: var(--champagne-beige); font-size: 0.78rem; letter-spacing: 2px; text-transform: uppercase;">
+          The Pinnacle of Luxury Coachbuilding &amp; Fleet Servicing
+        </span>
+      </div>
+
+      <h1 style="font-size: clamp(2rem, 5vw, 3.6rem); color: var(--cream-white); margin-bottom: 18px; line-height: 1.15; font-weight: 700;">
+        Crafting Masterpiece Coaches.<br>
+        <span style="background: linear-gradient(90deg, #E8D8BD 0%, #B89A70 50%, #FFF9F0 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+          Engineering Flawless Journeys.
+        </span>
+      </h1>
+
+      <p style="font-size: clamp(0.95rem, 1.8vw, 1.15rem); color: #D5C7B7; max-width: 760px; margin: 0 auto 36px; line-height: 1.6;">
+        Specialized commercial vehicle coachbuilders, luxury sleeper suite converters, and fleet maintenance facility. Complete transparency with real-time stage tracking and verified inspections.
+      </p>
+
+      <!-- Instant Vehicle Tracking Box -->
+      <div id="tracking" style="max-width: 620px; margin: 0 auto 40px; background: rgba(255, 249, 240, 0.08); backdrop-filter: blur(12px); border: 1.5px solid var(--soft-gold); padding: 16px 18px; border-radius: 18px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);">
+        <form onsubmit="handleQuickTrack(event)" style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <div style="flex: 1; min-width: 240px; position: relative;">
+            <input type="text" id="quickTrackInput" placeholder="Enter Coach Registration Plate" 
+                   style="width: 100%; padding: 13px 16px; background: rgba(0, 0, 0, 0.55); border: 1.5px solid var(--gold-border); border-radius: 10px; color: #FFF; font-family: var(--font-mono); font-size: 1rem; letter-spacing: 1px; outline: none;">
+          </div>
+          <button type="submit" class="btn btn-gold" style="padding: 13px 22px; font-size: 0.95rem; font-weight: 700;">
+            <i data-lucide="crosshair"></i> Track Vehicle
+          </button>
+        </form>
+        <p style="color: var(--champagne-beige); font-size: 0.78rem; margin-top: 10px; margin-bottom: 0;">
+          Direct access to live 6-stage fabrication progress, inspection certifications, and milestone updates.
+        </p>
+      </div>
+
+      <!-- Hero Visual Coach Frame -->
+      <div style="max-width: 860px; margin: 0 auto; border-radius: 18px; overflow: hidden; border: 2px solid var(--soft-gold); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6); position: relative;">
+        <img src="assets/images/coach-mercedes.svg" alt="Luxury Coach Crafted by KPV" style="width: 100%; display: block;">
+      </div>
+    </div>
+  </section>
+
+  <!-- Three Role Portals Showcase -->
+  <section id="portals" style="padding: 60px 20px; background: var(--warm-ivory);">
+    <div style="max-width: 1180px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 40px;">
+        <span style="font-family: var(--font-heading); color: var(--soft-gold); font-size: 0.82rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 700;">
+          CENTRALIZED COLLABORATION SUITE
+        </span>
+        <h2 style="font-size: clamp(1.6rem, 3.5vw, 2.2rem); color: var(--deep-brown); margin-top: 6px;">Select Your Dedicated Portal</h2>
+        <p style="color: var(--brown-muted); max-width: 580px; margin: 8px auto 0; font-size: 0.92rem;">
+          Specialized workflows tailored for administrators, workshop craftsmen, and fleet patrons.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 24px;">
+        <!-- Admin Card -->
+        <div class="card" style="border: 1.5px solid var(--gold-border); background: var(--cream-white); display: flex; flex-direction: column;">
+          <div style="padding: 26px;">
+            <div style="width: 48px; height: 48px; border-radius: 12px; background: #292722; color: var(--champagne-beige); display: flex; align-items: center; justify-content: center; margin-bottom: 18px;">
+              <i data-lucide="shield-check" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3 style="font-size: 1.25rem; color: var(--deep-brown); margin-bottom: 8px;">Admin Console</h3>
+            <p style="font-size: 0.88rem; color: var(--brown-muted); margin-bottom: 18px;">
+              Executive control: customer directory, employee rosters, fleet assignments, daily attendance logs, and financial ledger.
+            </p>
+            <ul style="list-style: none; padding: 0; margin-bottom: 22px; font-size: 0.82rem; color: var(--deep-brown); display: flex; flex-direction: column; gap: 8px;">
+              <li style="display: flex; align-items: center; gap: 8px;"><i data-lucide="check" style="width: 15px; color: var(--soft-gold);"></i> Customer &amp; Vehicle Management</li>
+              <li style="display: flex; align-items: center; gap: 8px;"><i data-lucide="check" style="width: 15px; color: var(--soft-gold);"></i> Wi-Fi Attendance Audit &amp; Mismatch Log</li>
+              <li style="display: flex; align-items: center; gap: 8px;"><i data-lucide="check" style="width: 15px; color: var(--soft-gold);"></i> Billing, Payments &amp; Receipts Ledger</li>
+            </ul>
+            <a href="login.html?role=admin" class="btn btn-primary w-100" style="padding: 11px;">
+              Enter Admin Portal <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Employee Card -->
+        <div class="card" style="border: 1.5px solid var(--gold-border); background: var(--cream-white); display: flex; flex-direction: column;">
+          <div style="padding: 26px;">
+            <div style="width: 48px; height: 48px; border-radius: 12px; background: #493A2E; color: var(--champagne-beige); display: flex; align-items: center; justify-content: center; margin-bottom: 18px;">
+              <i data-lucide="wrench" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3 style="font-size: 1.25rem; color: var(--deep-brown); margin-bottom: 8px;">Technician Workbench</h3>
+            <p style="font-size: 0.88rem; color: var(--brown-muted); margin-bottom: 18px;">
+              Clean, focused workbench: Wi-Fi network-verified attendance, assigned vehicle cards, camera/gallery photo upload with preview, and time-off requests.
+            </p>
+            <ul style="list-style: none; padding: 0; margin-bottom: 22px; font-size: 0.82rem; color: var(--deep-brown); display: flex; flex-direction: column; gap: 8px;">
+              <li style="display: flex; align-items: center; gap: 8px;"><i data-lucide="check" style="width: 15px; color: var(--soft-gold);"></i> Verified Company Wi-Fi Clock In/Out</li>
+              <li style="display: flex; align-items: center; gap: 8px;"><i data-lucide="check" style="width: 15px; color: var(--soft-gold);"></i> Inspection Photo Upload &amp; Previews</li>
+              <li style="display: flex; align-items: center; gap: 8px;"><i data-lucide="check" style="width: 15px; color: var(--soft-gold);"></i> Assigned Tasks &amp; Leave Tracking</li>
+            </ul>
+            <a href="login.html?role=employee" class="btn btn-gold w-100" style="padding: 11px;">
+              Enter Staff Workbench <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Customer Card -->
+        <div class="card" style="border: 2px solid var(--soft-gold); background: #FAF5EB; display: flex; flex-direction: column; box-shadow: 0 10px 26px rgba(184, 154, 112, 0.16);">
+          <div style="padding: 26px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;">
+              <div style="width: 48px; height: 48px; border-radius: 12px; background: var(--soft-gold); color: #FFF; display: flex; align-items: center; justify-content: center;">
+                <i data-lucide="crown" style="width: 24px; height: 24px;"></i>
+              </div>
+              <span class="badge badge-gold">VIP LOUNGE</span>
+            </div>
+            <h3 style="font-size: 1.25rem; color: var(--deep-brown); margin-bottom: 8px;">VIP Client Suite</h3>
+            <p style="font-size: 0.88rem; color: var(--brown-muted); margin-bottom: 18px;">
+              Luxury owner tracking: 6-stage vehicle progress timeline, before &amp; after interactive transformation slider, technician updates, and pro-forma invoice generator.
+            </p>
+            <ul style="list-style: none; padding: 0; margin-bottom: 22px; font-size: 0.82rem; color: var(--deep-brown); display: flex; flex-direction: column; gap: 8px;">
+              <li style="display: flex; align-items: center; gap: 8px;"><i data-lucide="check" style="width: 15px; color: var(--soft-gold);"></i> Live 6-Stage Progress Milestones</li>
+              <li style="display: flex; align-items: center; gap: 8px;"><i data-lucide="check" style="width: 15px; color: var(--soft-gold);"></i> Interactive Before/After Transformation Slider</li>
+              <li style="display: flex; align-items: center; gap: 8px;"><i data-lucide="check" style="width: 15px; color: var(--soft-gold);"></i> Dedicated Service Concierge</li>
+            </ul>
+            <a href="login.html?role=customer" class="btn btn-primary w-100" style="padding: 11px; background: #2A251E; border-color: var(--soft-gold);">
+              Enter Client Suite <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Craftsmanship Section -->
+  <section id="services" style="padding: 60px 20px; background: var(--cream-white);">
+    <div style="max-width: 1180px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 40px;">
+        <span style="font-family: var(--font-heading); color: var(--soft-gold); font-size: 0.82rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 700;">
+          MASTER COACHWORK DIVISION
+        </span>
+        <h2 style="font-size: clamp(1.6rem, 3.5vw, 2.2rem); color: var(--deep-brown); margin-top: 6px;">Excellence in Every Stitch &amp; Weld</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+        <div class="card p-4">
+          <div style="color: var(--soft-gold); margin-bottom: 12px;"><i data-lucide="armchair" style="width: 28px; height: 28px;"></i></div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 6px;">Italian Leather Sleeper Suites</h4>
+          <p style="font-size: 0.85rem; color: var(--brown-muted);">Private sleeper berths crafted with diamond quilted champagne leather, memory foam contouring, and individual reading sconces.</p>
+        </div>
+
+        <div class="card p-4">
+          <div style="color: var(--soft-gold); margin-bottom: 12px;"><i data-lucide="sparkles" style="width: 28px; height: 28px;"></i></div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 6px;">Starlight Acoustic Ceilings</h4>
+          <p style="font-size: 0.85rem; color: var(--brown-muted);">Micro-optical fiber starlight canopy paired with multi-layer acoustic damping pads to eliminate chassis rumble at cruising speeds.</p>
+        </div>
+
+        <div class="card p-4">
+          <div style="color: var(--soft-gold); margin-bottom: 12px;"><i data-lucide="wind" style="width: 28px; height: 28px;"></i></div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 6px;">Multi-Zone Heavy HVAC</h4>
+          <p style="font-size: 0.85rem; color: var(--brown-muted);">Rooftop whisper-quiet air distribution with individual berth micro-louvers and dual alternator high-capacity power banks.</p>
+        </div>
+
+        <div class="card p-4">
+          <div style="color: var(--soft-gold); margin-bottom: 12px;"><i data-lucide="tv" style="width: 28px; height: 28px;"></i></div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 6px;">Individual 4K Infotainment</h4>
+          <p style="font-size: 0.85rem; color: var(--brown-muted);">Android touchscreen displays per berth with centralized high-speed media streaming and isolated Bluetooth audio zones.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Luxury Footer -->
+  <footer style="background: #181613; color: var(--warm-ivory); padding: 40px 20px 24px; border-top: 1.5px solid var(--soft-gold);">
+    <div style="max-width: 1180px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <img src="assets/icons/logo.svg" alt="KPV Coaches" style="height: 40px;">
+        </div>
+        <div style="display: flex; gap: 20px; font-size: 0.85rem;">
+          <a href="login.html?role=admin" style="color: var(--champagne-beige);">Admin Portal</a>
+          <a href="login.html?role=employee" style="color: var(--champagne-beige);">Staff Portal</a>
+          <a href="login.html?role=customer" style="color: var(--champagne-beige);">Client Suite</a>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid rgba(184, 154, 112, 0.2); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 0.78rem; color: #8F8173;">
+        <div>&copy; 2026 KPV COACHES. All rights reserved. Commercial Vehicle Management.</div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span class="live-pulse-dot"></span>
+          <span>Workshop Status: Open &bull; Main Bay Live</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/demo-data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    function handleQuickTrack(e) {
+      e.preventDefault();
+      const val = document.getElementById("quickTrackInput").value.trim().toUpperCase();
+      if (!val) {
+        App.showToast("Please enter a vehicle registration plate number.", "warning");
+        return;
+      }
+      
+      const veh = StorageService.getVehicleByReg(val);
+      if (veh) {
+        AuthService.quickLogin("customer");
+        window.location.href = `customer/vehicle-tracking.html?reg=${encodeURIComponent(val)}`;
+      } else {
+        App.showToast(`Vehicle '${val}' is not currently in the workshop registry. Please verify the number or contact your advisor.`, "info");
+      }
+    }
+  </script>
+</body>
+</html>
